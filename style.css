@@ -567,6 +567,7 @@ p {
   position: relative;
   top: -135px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .features__slider .slider__item {
   background: #120f54;
@@ -575,6 +576,7 @@ p {
   margin: 0 10px;
   padding: 40px 0 34px;
   text-align: center;
+  position: relative;
 }
 .features__slider .slider__item div {
   text-align: center;
@@ -584,11 +586,46 @@ p {
   width: 60%;
   margin: 0 auto;
 }
-.features__slider .slider__item .owl-nav {
+
+.owl-theme .owl-nav {
   margin-top: 10px;
   display: flex !important;
   justify-content: space-between !important;
   -webkit-tap-highlight-color: transparent;
-  position: relative;
-  top: -181px !important;
+}
+
+.owl-prev {
+  outline: none;
+  width: 60px;
+  height: 40px;
+  top: 35%;
+  background: #291b6b !important;
+  font-size: 25px !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  position: absolute;
+  left: -10px;
+}
+.owl-prev:hover {
+  background: #571ce0 !important;
+}
+
+.owl-next {
+  outline: none;
+  width: 60px;
+  height: 40px;
+  top: 35%;
+  background: #291b6b !important;
+  font-size: 25px !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  position: absolute;
+  right: -10px;
+}
+.owl-next:hover {
+  background: #571ce0 !important;
+}
+
+.owl-dots {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

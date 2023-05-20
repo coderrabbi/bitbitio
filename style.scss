@@ -549,6 +549,7 @@ p {
   position: relative;
   top: -135px;
   margin: 0 auto;
+  padding: 0 20px;
   .slider__item {
     background: $primary;
     border: 1px solid $border__color;
@@ -556,6 +557,7 @@ p {
     margin: 0 10px;
     padding: 40px 0 34px;
     text-align: center;
+    position: relative;
     div {
       text-align: center;
       margin-bottom: 20px;
@@ -564,13 +566,44 @@ p {
         margin: 0 auto;
       }
     }
-    .owl-nav {
-      margin-top: 10px;
-      display: flex !important;
-      justify-content: space-between !important;
-      -webkit-tap-highlight-color: transparent;
-      position: relative;
-      top: -181px !important;
-    }
   }
+}
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  display: flex !important;
+  justify-content: space-between !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.owl-prev {
+  outline: none;
+  width: 60px;
+  height: 40px;
+  top: 35%;
+  background: #291b6b !important;
+  font-size: 25px !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  position: absolute;
+  left: -10px;
+  &:hover {
+    background: $hover__color !important;
+  }
+}
+.owl-next {
+  outline: none;
+  width: 60px;
+  height: 40px;
+  top: 35%;
+  background: #291b6b !important;
+  font-size: 25px !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  position: absolute;
+  right: -10px;
+  &:hover {
+    background: $hover__color !important;
+  }
+}
+.owl-dots {
+  display: none;
 }
