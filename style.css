@@ -29,6 +29,45 @@ h1 {
   color: #fff;
 }
 
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 55px;
+    line-height: 74.1px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: -4px;
+  color: #41cd7d;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-top: -6px;
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 19px;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
 .btn__border {
   border: 1px solid #571ce0;
   border-radius: 35px;
@@ -274,7 +313,7 @@ h1 {
   }
 }
 .hero__section .hero__container .for__animation .animation_coin-2 {
-  left: 0%;
+  left: 0;
   position: absolute;
   top: 30%;
   animation: ripple2Ani 4s linear infinite;
@@ -321,7 +360,7 @@ h1 {
 }
 .hero__section .hero__container .for__animation .animation_coin-5 {
   left: 45%;
-  bottom: 5%;
+  bottom: 8%;
   position: absolute;
   animation: spin 30s linear infinite;
 }
@@ -330,4 +369,226 @@ h1 {
   bottom: 20%;
   position: absolute;
   animation: rippleAni 3s linear infinite;
+}
+
+.counter__section {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  top: -203px;
+}
+.counter__section .counter__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  padding: 40px 30px 30px;
+  background: #0d102f;
+  border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .counter__section .counter__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.counter__section .counter__container .counter__item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.counter__section .counter__container .counter__item div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media screen and (min-width: 768px) {
+  .counter__section .counter__container .counter__item div {
+    gap: 10px;
+  }
+}
+.counter__section .counter__container .counter__item img {
+  width: 70px;
+}
+@media screen and (min-width: 768px) {
+  .counter__section .counter__container .counter__item img {
+    width: 89px;
+  }
+}
+.counter__section .counter__container .counter__item h4 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .counter__section .counter__container .counter__item h4 {
+    font-size: 43px;
+  }
+}
+.counter__section .counter__container .counter__item span {
+  color: #41cd7d;
+  font-size: 15px;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .counter__section .counter__container .counter__item span {
+    font-size: 18px;
+  }
+}
+
+.about__section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about__section .about__container {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  top: -100px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .about__section .about__container {
+    padding: 0px;
+  }
+}
+.about__section .about__container .about__container-left {
+  display: none;
+  width: 50%;
+  direction: rtl;
+}
+@media screen and (min-width: 768px) {
+  .about__section .about__container .about__container-left {
+    display: block;
+  }
+}
+.about__section .about__container .about__container-left img {
+  max-width: unset;
+}
+.about__section .about__container .about__container-right {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about__section .about__container .about__container-right {
+    width: 50%;
+  }
+}
+.about__section .about__container .about__container-right .about__container-right__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+}
+.about__section .about__container .about__container-right .about__single__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 40px 0 35px;
+  border: 1px solid #8790ae;
+  border-radius: 20px;
+}
+.about__section .about__container .about__container-right .about__single__card h5 {
+  color: #fff;
+}
+.about__section .about__container .about__container-right .about__single__card img {
+  max-width: 50%;
+}
+
+.how__to__work__section {
+  background-image: url(./assets/how-works-bg.png);
+  padding: 50px 0 50px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .how__to__work__section {
+    padding: 120px 0 50px 0;
+  }
+}
+.how__to__work__section .how__to__work__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.how__to__work__section .how__to__work__container div {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .how__to__work__section .how__to__work__container div {
+    width: 60%;
+  }
+}
+
+.amazing__features__section {
+  background-image: url(./assets/amazing-features-bg.png);
+  margin: 50px 0;
+  padding: 50px 0 150px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1700px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .amazing__features__section {
+    padding: 120px 0 200px 0;
+  }
+}
+.amazing__features__section .amazing__features__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.amazing__features__section .amazing__features__container .amazing__features__text {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .amazing__features__section .amazing__features__container .amazing__features__text {
+    width: 50%;
+  }
+}
+.amazing__features__section .amazing__features__container .features__circle {
+  position: absolute;
+  top: 0;
+}
+.amazing__features__section .amazing__features__container .features__circle img {
+  max-width: 100%;
+}
+
+.features__slider {
+  max-width: 1200px;
+  position: relative;
+  top: -135px;
+  margin: 0 auto;
+}
+.features__slider .slider__item {
+  background: #120f54;
+  border: 1px solid #8790ae;
+  border-radius: 20px;
+  margin: 0 10px;
+  padding: 40px 0 34px;
+  text-align: center;
+}
+.features__slider .slider__item div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.features__slider .slider__item div img {
+  width: 60%;
+  margin: 0 auto;
+}
+.features__slider .slider__item .owl-nav {
+  margin-top: 10px;
+  display: flex !important;
+  justify-content: space-between !important;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  top: -181px !important;
 }/*# sourceMappingURL=style.css.map */
