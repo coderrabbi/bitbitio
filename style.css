@@ -640,6 +640,67 @@ p {
   }
 }
 
+.select__sports__section {
+  max-width: 1300px;
+  background-color: #291b6b;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.select__sports__section .select__sports__container {
+  padding: 50px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .select__sports__section .select__sports__container {
+    flex-direction: row;
+  }
+}
+.select__sports__section .select__sports__container .select__sports__cotainer__left {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .select__sports__section .select__sports__container .select__sports__cotainer__left {
+    width: 50%;
+  }
+}
+.select__sports__section .select__sports__container .select__sports__cotainer__left .select__sports__text {
+  background-color: #38268f;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  cursor: pointer;
+  width: 80%;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.select__sports__section .select__sports__container .select__sports__cotainer__left h5 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+}
+.select__sports__section .select__sports__container .select__sports__cotainer__right {
+  background: #120f54;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+.select__sports__section .select__sports__container .select__sports__cotainer__right h4 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.select__sports__section .select__sports__container .select__sports__cotainer__right img {
+  width: 100%;
+}
+
 .amazing__features__section {
   background-image: url(./assets/amazing-features-bg.png);
   margin: 50px 0;
