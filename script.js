@@ -1,3 +1,14 @@
+const nav_header = document.getElementById("mobile__menu__item");
+const open = document.getElementById("open");
+
+const toggleNavbar = () => {
+  if (nav_header.style.display === "block") {
+    nav_header.style.display = "none";
+  } else {
+    nav_header.style.display = "block";
+  }
+};
+open.addEventListener("click", () => toggleNavbar());
 const faq = document.getElementsByClassName("faq-page");
 let i;
 for (i = 0; i < faq.length; i++) {
