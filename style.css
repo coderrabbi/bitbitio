@@ -401,8 +401,8 @@ p {
 }
 .hero__section .hero__container .hero__container-right div {
   position: absolute;
-  top: 21%;
-  left: 29%;
+  top: 18%;
+  left: 39%;
   z-index: 0;
   height: 100%;
 }
