@@ -513,6 +513,10 @@ p {
       justify-content: space-evenly;
     }
     .counter__item {
+      .total {
+        display: grid;
+        grid-template-columns: 1fr auto;
+      }
       div {
         display: flex;
         flex-direction: column;
@@ -669,6 +673,11 @@ p {
         width: 80%;
         padding: 5px 20px;
         border-radius: 5px;
+        .how__works__img {
+          img {
+            width: 80px;
+          }
+        }
       }
       h5 {
         font-weight: 400;
@@ -809,6 +818,7 @@ p {
     flex-direction: column-reverse;
     @media screen and (min-width: 768px) {
       flex-direction: row;
+      align-items: center;
       padding: 0;
     }
     .more__features__container-left {
@@ -832,6 +842,15 @@ p {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        h2 {
+          font-size: 23px;
+          line-height: 28px;
+          color: #fff;
+          @media screen and (min-width: 768px) {
+            font-size: 26px;
+            line-height: 31px;
+          }
+        }
       }
       .more__features-list {
         padding: 50px 0;

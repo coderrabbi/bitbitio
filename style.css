@@ -514,6 +514,10 @@ p {
   align-items: center;
   gap: 30px;
 }
+.counter__section .counter__container .counter__item .total {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
 .counter__section .counter__container .counter__item div {
   display: flex;
   flex-direction: column;
@@ -684,6 +688,9 @@ p {
   padding: 5px 20px;
   border-radius: 5px;
 }
+.select__sports__section .select__sports__container .select__sports__cotainer__left .select__sports__text .how__works__img img {
+  width: 80px;
+}
 .select__sports__section .select__sports__container .select__sports__cotainer__left h5 {
   font-weight: 400;
   color: #fff;
@@ -831,6 +838,7 @@ p {
 @media screen and (min-width: 768px) {
   .more__features .more__features__container {
     flex-direction: row;
+    align-items: center;
     padding: 0;
   }
 }
@@ -860,6 +868,17 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.more__features .more__features__container .more__features__container-right .more__features-text h2 {
+  font-size: 23px;
+  line-height: 28px;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .more__features .more__features__container .more__features__container-right .more__features-text h2 {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 .more__features .more__features__container .more__features__container-right .more__features-list {
   padding: 50px 0;
