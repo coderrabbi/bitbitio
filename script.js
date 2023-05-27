@@ -3,6 +3,7 @@ const open = document.getElementById("open");
 const total = document.getElementById("total-prize");
 const winners = document.getElementById("winners");
 const onlinePlayers = document.getElementById("online-players");
+const overlay = document.getElementById("container__overlay");
 
 //navigation
 
@@ -17,9 +18,9 @@ open.addEventListener("click", () => toggleNavbar());
 
 // counter
 const day = new Date().getDate();
-const totalCount = setInterval(totalPrize, 1000);
-const totalWinners = setInterval(totalWins, 1000);
-const totalPlayers = setInterval(totalOnlinePlayers, 1000);
+const totalCount = setInterval(totalPrize, 2000);
+const totalWinners = setInterval(totalWins, 3000);
+const totalPlayers = setInterval(totalOnlinePlayers, 2000);
 let t = 13457941;
 let tWinners = 12457;
 let players = 4392;
@@ -52,3 +53,24 @@ for (i = 0; i < faq.length; i++) {
     }
   });
 }
+
+// pop up
+window.addEventListener("load", function () {
+  setTimeout(function open(event) {
+    document.querySelector(".popup").style.display = "block";
+    overlay.style.display = "block";
+  }, 2000);
+
+  setInterval(function () {
+    $(".custom-social-proof").stop().slideToggle("slow");
+  }, 8000);
+  $(".custom-close").click(function () {
+    $(".custom-social-proof").stop().slideToggle("slow");
+  });
+});
+document.querySelector("#close").addEventListener("click", function () {
+  document.querySelector(".popup").style.display = "none";
+  overlay.style.display = "none";
+});
+
+// product popup
