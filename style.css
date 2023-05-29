@@ -227,6 +227,9 @@ p {
   justify-content: center;
   align-items: center;
 }
+.signUp__popup__section a {
+  color: #fff;
+}
 .signUp__popup__section .signUp__popup {
   background: url("./assets/popup_bg.jpg");
   position: fixed;

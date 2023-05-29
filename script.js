@@ -6,6 +6,11 @@ const onlinePlayers = document.getElementById("online-players");
 const overlay = document.getElementById("container__overlay");
 const signIn = document.getElementById("signin__btn");
 const login = document.getElementById("login__btn");
+const fName = document.getElementById("name_input");
+const email = document.getElementById("email_input");
+const tel = document.getElementById("tel_input");
+const signUp = document.getElementById("signUp__btn");
+const mailBtn = document.getElementById("for__mail");
 
 // login
 function Login() {
@@ -31,7 +36,13 @@ function Login() {
   xmlHttp.open("post", "https://secure1.77711.eu/LoginAPI.aspx");
   xmlHttp.send(formData);
 }
-
+// sign up
+signUp.addEventListener("click", function () {
+  const emailValue = email.value;
+  const nameValue = fName.value;
+  const telValue = tel.value;
+  mailBtn.href = `mailto:moonteval@gmail.com?subject=Information!&body=name:${nameValue},email:${emailValue},telephone:${telValue}`;
+});
 //navigation
 const toggleNavbar = () => {
   if (nav_header.style.display === "block") {
@@ -41,7 +52,6 @@ const toggleNavbar = () => {
   }
 };
 open.addEventListener("click", () => toggleNavbar());
-
 // counter
 const day = new Date().getDate();
 const totalCount = setInterval(totalPrize, 2000);
@@ -62,7 +72,6 @@ function totalOnlinePlayers() {
   players = players + 1;
   onlinePlayers.innerHTML = players;
 }
-
 // faq
 const faq = document.getElementsByClassName("faq-page");
 let i;
@@ -79,7 +88,6 @@ for (i = 0; i < faq.length; i++) {
     }
   });
 }
-
 // pop up
 window.addEventListener("load", function () {
   setTimeout(function open(event) {
