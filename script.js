@@ -5,9 +5,34 @@ const winners = document.getElementById("winners");
 const onlinePlayers = document.getElementById("online-players");
 const overlay = document.getElementById("container__overlay");
 const signIn = document.getElementById("signin__btn");
+const login = document.getElementById("login__btn");
+
+// login
+function Login() {
+  var elements = document.getElementsByClassName("loginVal");
+  var formData = new FormData();
+  for (var i = 0; i < elements.length; i++) {
+    formData.append(elements[i].name, elements[i].value);
+  }
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function () {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+      var appURL = xmlHttp.responseText;
+
+      if (appURL == "invalid") {
+        //login is invalid, show invalid alert
+
+        alert("Invalid login or password!");
+      } else {
+        window.open(appURL, "_self"); //login is valid, forward user to app
+      }
+    }
+  };
+  xmlHttp.open("post", "https://secure1.77711.eu/LoginAPI.aspx");
+  xmlHttp.send(formData);
+}
 
 //navigation
-
 const toggleNavbar = () => {
   if (nav_header.style.display === "block") {
     nav_header.style.display = "none";
@@ -69,6 +94,16 @@ window.addEventListener("load", function () {
     $(".custom-social-proof").stop().slideToggle("slow");
   });
 });
+login.addEventListener("click", function () {
+  document.querySelector(".login__popup").style.display = "block";
+  overlay.style.display = "block";
+});
+document
+  .querySelector("#loginclose__btn")
+  .addEventListener("click", function () {
+    document.querySelector(".login__popup").style.display = "none";
+    overlay.style.display = "none";
+  });
 signIn.addEventListener("click", function () {
   document.querySelector(".signUp__popup").style.display = "block";
   overlay.style.display = "block";

@@ -70,12 +70,13 @@ p {
   }
 }
 
-.line__brake {
+.line__break {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .line__brake {
+  .line__break {
     display: block;
+    margin: 10px 0;
   }
 }
 
@@ -287,6 +288,72 @@ p {
   color: #ffffff;
   text-decoration: none;
   padding: 5px 0;
+}
+
+.login__popup__section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.login__popup__section .login__popup {
+  background: url("./assets/popup_bg.jpg");
+  position: fixed;
+  max-width: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  display: none;
+  text-align: center;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.login__popup__section .login__popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login__popup__section .login__popup form a {
+  color: #fff;
+}
+.login__popup__section .login__popup .popup__container {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 30px 40px;
+  background: rgba(0, 0, 0, 0.2431372549);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.login__popup__section .login__popup .popup__container input {
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+}
+.login__popup__section .login__popup .popup__btn {
+  text-align: right;
+}
+.login__popup__section .login__popup .popup__btn #loginclose__btn {
+  background: transparent;
+  color: #fff;
+  font-size: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  cursor: pointer;
+}
+.login__popup__section .login__popup .popup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
 }
 
 .popup__section {
@@ -680,6 +747,9 @@ p {
   padding: 300px 0;
   display: flex;
   gap: 30px;
+}
+.hero__section .hero__container a {
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   .hero__section .hero__container {
