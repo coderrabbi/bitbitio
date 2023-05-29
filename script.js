@@ -4,6 +4,7 @@ const total = document.getElementById("total-prize");
 const winners = document.getElementById("winners");
 const onlinePlayers = document.getElementById("online-players");
 const overlay = document.getElementById("container__overlay");
+const signIn = document.getElementById("signin__btn");
 
 //navigation
 
@@ -67,6 +68,14 @@ window.addEventListener("load", function () {
   $(".custom-close").click(function () {
     $(".custom-social-proof").stop().slideToggle("slow");
   });
+});
+signIn.addEventListener("click", function () {
+  document.querySelector(".signUp__popup").style.display = "block";
+  overlay.style.display = "block";
+});
+document.querySelector("#closeBtn").addEventListener("click", function () {
+  document.querySelector(".signUp__popup").style.display = "none";
+  overlay.style.display = "none";
 });
 document.querySelector("#close").addEventListener("click", function () {
   document.querySelector(".popup").style.display = "none";
